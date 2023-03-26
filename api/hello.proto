@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "dgzn.dev/hello/api";
+
+service Greeter {
+  rpc SayHelloOnce (HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+  optional string name = 1;
+}
+
+message HelloResponse {
+  string message = 1;
+}
